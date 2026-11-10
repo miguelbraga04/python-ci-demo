@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-ci-demo"
+version = "0.1.0"
+description = "A small Python calculator project"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+include = ["calculator*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "build"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
