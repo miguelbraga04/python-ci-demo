@@ -11,6 +11,3 @@ def divide(a, b):
         raise ValueError("Nollalla jakaminen ei ole sallittua")
 
     return a / b
-
-def test_error():
-    unused_variable = 10
